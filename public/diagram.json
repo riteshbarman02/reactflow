@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    { "id": "1", "type": "OutputNode", "position": { "x": 0, "y": 100 }, "data": { "label": "NURBS Surface", "details": "Degree\nKnots\nControl Points", "background": "#90EE90", "handleLabel": "Geometry" ,"draggable": "true", "isConnectable": "true"} },
+    { "id": "2", "type": "customNode", "position": { "x": 200, "y": 80 }, "data": { "label": "Refinement", "details": "Geometry\nRef. Parameters", "background": "#ADD8E6", "handleLabel": "Geometry", "isConnectable": "true" } },
+    { "id": "3", "type": "customNode", "position": { "x": 400, "y": 100 }, "data": { "label": "Optimisation", "details": "Geometry\nProblem\nOptimiser", "background": "#ADD8E6", "handleLabel": "Geometry" } },
+    { "id": "4", "type": "OptimaNode", "position": { "x": 0, "y": 250 }, "data": { "label": "Optima Problem", "details": "Shape obj\nShape constraint", "background": "#90EE90", "handleLabel": ""} },
+    { "id": "5", "type": "customNode", "position": { "x": 200, "y": 200 }, "data": { "label": "Problem", "details": "Objective\nConstraints\nOptions", "background": "#ADD8E6", "handleLabel": "Problem" } },
+    { "id": "6", "type": "customNode", "position": { "x": 600, "y": 150 }, "data": { "label": "Solar Analysis", "details": "Geometry\nLocation data\nAnalysis parameters", "background": "#ADD8E6", "handleLabel": "Geometry" } },
+    { "id": "7", "type": "customNode", "position": { "x": 800, "y": 200 }, "data": { "label": "Print", "details": "STL", "background": "#ADD8E6", "handleLabel": "Geometry" } },
+    { "id": "8", "type": "OutputNode", "position": { "x": 0, "y": 400 }, "data": { "label": "Options", "details": "Opt.dat", "background": "#90EE90", "handleLabel": "Option" } },
+    { "id": "9", "type": "OutputNode", "position": { "x": 200, "y": 350 }, "data": { "label": "Optimiser", "details": "SQP", "background": "#90EE90", "handleLabel": "Optimiser" } },
+    { "id": "10", "type": "OutputNode", "position": { "x": 400, "y": 250 }, "data": { "label": "Location data", "details": "Loc.dat", "background": "#90EE90", "handleLabel": "Location data" } },
+    { "id": "11", "type": "OutputNode", "position": { "x": 400, "y": 350 }, "data": { "label": "Parameters", "details": "Para.dat", "background": "#90EE90", "handleLabel": "Parameters" } }
+  ],
+  "edges": [
+    { "id": "e1-2", "source": "1", "target": "2", "sourceHandle": "source-NURBS Surface", "targetHandle": "target-0", "style": { "stroke": "red", "strokeWidth": 3, "strokeDasharray": "6, 2" } },
+    { "id": "e2-3", "source": "2", "target": "3", "sourceHandle": "source-Refinement", "targetHandle": "target-0", "style": { "stroke": "red", "strokeWidth": 3, "strokeDasharray": "6, 2" } },
+    { "id": "e3-6", "source": "3", "target": "6", "sourceHandle": "source-Optimisation", "targetHandle": "target-0", "style": { "stroke": "red", "strokeWidth": 3, "strokeDasharray": "6, 2" } },
+    { "id": "e6-7", "source": "6", "target": "7", "sourceHandle": "source-Solar Analysis", "targetHandle": "target-0", "style": { "stroke": "red", "strokeWidth": 3, "strokeDasharray": "6, 2" } },
+    { "id": "e4-5", "source": "4", "target": "5", "sourceHandle": "source-0", "targetHandle": "target-0", "style": { "stroke": "#002D62", "strokeWidth": 3 }},
+    { "id": "e4-5", "source": "4", "target": "5", "sourceHandle": "source-1", "targetHandle": "target-1", "style": { "stroke": "#002D62", "strokeWidth": 3 }},
+    { "id": "e5-3", "source": "5", "target": "3", "sourceHandle": "source-Problem", "targetHandle": "target-1", "style": { "stroke": "#002D62", "strokeWidth": 3 }},
+    { "id": "e9-3", "source": "9", "target": "3", "sourceHandle": "source-Optimiser", "targetHandle": "target-2", "style": { "stroke": "#002D62", "strokeWidth": 3 }},
+    { "id": "e8-5", "source": "8", "target": "5", "sourceHandle": "source-Options", "targetHandle": "target-2", "style": { "stroke": "#002D62", "strokeWidth": 3 }},
+    { "id": "e10-6", "source": "10", "target": "6", "sourceHandle": "source-Location data", "targetHandle": "target-1", "style": { "stroke": "#002D62", "strokeWidth": 3 }},
+    { "id": "e11-6", "source": "11", "target": "6", "sourceHandle": "source-Parameters", "targetHandle": "target-2", "style": { "stroke": "#002D62", "strokeWidth": 3 }},
+    { "id": "e5-8", "source": "5", "target": "8", "sourceHandle": "source-Problem", "targetHandle": "target-0", "style": { "stroke": "#002D62", "strokeWidth": 3 }}
+  ]
+}
